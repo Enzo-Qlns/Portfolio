@@ -2,8 +2,8 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import CardContact from '@/components/CardContact'
 
 export const metadata = {
-  title: 'Uses',
-  description: 'Software I use, gadgets I love, and other things I recommend.',
+  title: 'Contact',
+  description: 'Vous avez une question, une suggestion ou vous souhaitez simplement dire bonjour ? N’hésitez pas à me contacter.',
 }
 
 export default function Contact() {
