@@ -1,0 +1,13 @@
+services:
+  web:
+    image: portofolio:latest
+    container_name: portofolio
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - my-net
+
+networks:
+  my-net:
