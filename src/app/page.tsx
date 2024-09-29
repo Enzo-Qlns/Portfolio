@@ -254,7 +254,7 @@ export default async function Home() {
             dans la création de sites Web et d&apos;applications de haute
             qualité.{' '}
           </p>
-          <div className="mt-6 flex gap-6">
+          <div className="mt-6 flex gap-6 items-center">
             <SocialLink href="https://github.com/Enzo-Qlns" icon={GitHubIcon}>
               Suivez-moi sur GitHub
             </SocialLink>
