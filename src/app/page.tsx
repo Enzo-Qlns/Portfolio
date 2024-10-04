@@ -250,9 +250,8 @@ export default async function Home() {
             Hi, I’m Enzo QUELENIS 👋
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Je suis software engineer basé à Reims, en France. Je me spécialise
-            dans la création de sites Web et d&apos;applications de haute
-            qualité.{' '}
+            Je suis software engineer basé à Reims, en France. Je suis passionné
+            par la création de sites Web et d&apos;application mobile.{' '}
           </p>
           <div className="mt-6 flex gap-6 items-center">
             <SocialLink href="https://github.com/Enzo-Qlns" icon={GitHubIcon}>
