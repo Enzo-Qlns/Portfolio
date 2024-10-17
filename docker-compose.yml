@@ -1,7 +1,7 @@
 services:
   web:
-    image: portofolio:latest
-    container_name: portofolio
+    image: portfolio:latest
+    container_name: portfolio
     restart: always
     build:
       context: .
