@@ -5,6 +5,8 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import logoIut from '@/images/logos/iut.svg'
+import logoSkolae from '@/images/logos/skolae-noir.svg'
+import React from 'react'
 
 const projects = [
   {
@@ -26,6 +28,16 @@ const projects = [
       label: 'Voir sur github',
     },
     logo: logoAnimaginary,
+  },
+  {
+    name: 'Myges Grades Notification 🎓',
+    description:
+      "Ce projet est un script Python qui envoie des notifications de notes via Telegram en utilisant l'api Skolae.",
+    link: {
+      href: 'https://github.com/Enzo-Qlns/myges-grades-notifications.git',
+      label: 'Voir sur github',
+    },
+    logo: logoSkolae,
   },
 ]
 
