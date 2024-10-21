@@ -2,7 +2,20 @@
 const nextConfig = {
   output: 'standalone',
   images: {
-    domains: ['images.unsplash.com', 'api.microlink.io', 'esgi.fr'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+        {
+            protocol: 'https',
+            hostname: 'api.microlink.io',
+        },
+        {
+            protocol: 'https',
+            hostname: 'esgi.fr',
+        },
+    ]
   },
 }
 
