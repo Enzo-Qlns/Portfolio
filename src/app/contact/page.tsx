@@ -11,6 +11,7 @@ export default function Contact() {
     <SimpleLayout
       title="Restons en contact ! 📬"
       intro="Vous avez une question, une suggestion ou vous souhaitez simplement dire bonjour ? N’hésitez pas à me contacter."
+      animation={false}
     >
       <div className="space-y-20">
         <div className="mx-auto max-w-2xl space-y-16 divide-y divide-gray-100 lg:mx-0 lg:max-w-none">

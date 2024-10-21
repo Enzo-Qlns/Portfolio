@@ -24,7 +24,7 @@ function CloseXMark() {
 
 function CardMail() {
   return (
-    <div className="min-w-40 rounded-2xl border border-zinc-100 p-10 pr-20 dark:border-zinc-700/40 dark:bg-zinc-800 dark:text-zinc-100">
+    <div className="min-w-40 rounded-2xl border border-zinc-100 p-10 pr-20 dark:border-zinc-700/40 dark:bg-zinc-800 dark:text-zinc-100 z-20">
       <h3 className="text-base font-semibold leading-7 tracking-tight text-zinc-800 dark:text-zinc-100">
         Email 📧
       </h3>
@@ -53,7 +53,7 @@ function CardMap({ setIsPlaceClicked }: CardMapProps) {
   return (
     <div
       className={clsx(
-        'rounded-2xl border border-zinc-100 p-10 dark:border-zinc-700/40 dark:bg-zinc-800 dark:text-zinc-100',
+        'rounded-2xl border border-zinc-100 p-10 dark:border-zinc-700/40 dark:bg-zinc-800 dark:text-zinc-100 z-20',
       )}
     >
       <h3 className="text-base font-semibold leading-7 tracking-tight text-zinc-800 dark:text-zinc-100">
@@ -79,7 +79,7 @@ export default function CardContact() {
   const [isPlaceClicked, setIsPlaceClicked] = useState(false)
 
   return isPlaceClicked ? (
-    <div className={'relative w-full'}>
+    <div className={'relative w-full z-20'}>
       <iframe
         className={'focus:outline-none focus:ring-0'}
         src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Reims+(Reims)&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"

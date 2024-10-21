@@ -1,16 +1,20 @@
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
-import clsx from 'clsx'
 import { Button } from '@/components/Button'
+import { MovingButton } from '@/components/ui/moving-border'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon, ProIcon } from '@/components/SocialIcons'
 import logoPum from '@/images/logos/pum.svg'
 import logoEsgi from '@/images/logos/esgi.svg'
+import { Cover } from '@/components/ui/cover'
+import React from 'react'
+import { GlareCard } from '@/components/ui/glare-card'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import { LinkPreview } from '@/components/ui/link-preview'
+import { PinContainer } from '@/components/ui/3d-pin'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -84,6 +88,41 @@ function SchoolIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function Photos() {
+  return (
+    <div className="mt-10 flex flex-wrap justify-center gap-x-4">
+      <GlareCard className="flex flex-col items-center justify-center">
+        <Image
+          src={image1}
+          alt={'moi'}
+          className="h-full w-full object-cover"
+        />
+      </GlareCard>
+      <GlareCard className="flex flex-col items-center justify-center">
+        <Image
+          src={image2}
+          alt={'moi'}
+          className="h-full w-full object-cover"
+        />
+      </GlareCard>
+      <GlareCard className="flex flex-col items-center justify-center">
+        <Image
+          src={image3}
+          alt={'moi'}
+          className="h-full w-full object-cover"
+        />
+      </GlareCard>
+      <GlareCard className="flex flex-col items-center justify-center">
+        <Image
+          src={image4}
+          alt={'moi'}
+          className="h-full w-full object-cover"
+        />
+      </GlareCard>
+    </div>
+  )
+}
+
 function SocialLink({
   icon: Icon,
   ...props
@@ -103,9 +142,9 @@ function Newsletter() {
       <h2 className="flex items-center justify-between text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Vous souhaitez en savoir plus sur moi ? 📩</span>
-        <Link href={'/contact'} className={'w-fit'}>
-          <Button className="m-0 ml-4 flex-none">Contact</Button>
-        </Link>
+        <MovingButton as={Link} href={'/contact'}>
+          Contact
+        </MovingButton>
       </h2>
     </div>
   )
@@ -214,46 +253,19 @@ function Schools() {
   )
 }
 
-function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-
-  return (
-    <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
-              rotations[imageIndex % rotations.length],
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
 export default async function Home() {
   return (
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Hi, I’m Enzo QUELENIS 👋
+            Hi, I’m <Cover>Enzo QUELENIS</Cover> 👋
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Je suis software engineer basé à Reims, en France. Je suis passionné
             par la création de sites Web et d&apos;application mobile.{' '}
           </p>
-          <div className="mt-6 flex gap-6 items-center">
+          <div className="mt-6 flex items-center gap-6">
             <SocialLink href="https://github.com/Enzo-Qlns" icon={GitHubIcon}>
               Suivez-moi sur GitHub
             </SocialLink>
@@ -274,7 +286,10 @@ export default async function Home() {
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="space-y-7 text-justify text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              👨‍💻 Actuellement en trosième année d&apos;alternance à l&apos;ESGI
+              👨‍💻Actuellement en trosième année d&apos;alternance à l&apos;
+              <LinkPreview url="https://esgi.fr" className="font-bold">
+                ESGI
+              </LinkPreview>{' '}
               en spécialité Ingénierie du Web, une école spécialisée dans
               l&apos;informatique. Je réalise cette alternance à la PUM 👨‍💼, où
               je travaille en étroite collaboration avec des professionnels du

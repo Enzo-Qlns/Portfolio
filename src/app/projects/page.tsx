@@ -62,6 +62,7 @@ export default function Projects() {
     <SimpleLayout
       title="Voici quelques projets sur lesquels j’ai travaillé."
       intro="J’aime explorer de nouvelles idées et les transformer en projets concrets. Voici quelques-uns de mes projets personnels. 🚀 "
+      animation={true}
     >
       <ul
         role="list"

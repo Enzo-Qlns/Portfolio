@@ -5,6 +5,9 @@ import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'
+import { ShootingStars } from '@/components/ui/shooting-stars'
+import { StarsBackground } from '@/components/ui/stars-background'
+import React from 'react'
 
 export const metadata: Metadata = {
   title: {
@@ -32,6 +35,8 @@ export default function RootLayout({
             <Layout>{children}</Layout>
           </div>
         </Providers>
+        <ShootingStars />
+        <StarsBackground />
       </body>
       <GoogleAnalytics gaId="G-VG6R4B6L8Z" />
     </html>

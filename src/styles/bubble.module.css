@@ -1,0 +1,30 @@
+.hoverText {
+    transition: 0.35s font-weight, 0.35s color;
+    font-weight: 900;
+    color: rgb(238, 242, 255);
+}
+
+.hoverText:hover {
+    font-weight: 400;
+    color: rgb(199, 210, 254);
+}
+
+/* To the right */
+.hoverText:hover + .hoverText {
+    font-weight: 700;
+    color: rgb(199, 210, 254);
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+    font-weight: 500;
+}
+
+/* To the left */
+.hoverText:hover ~ .hoverText {
+    font-weight: 700;
+    color: rgb(199, 210, 254);
+}
+
+.hoverText:hover ~ .hoverText ~ .hoverText {
+    font-weight: 500;
+}
