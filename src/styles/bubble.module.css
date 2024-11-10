@@ -1,3 +1,5 @@
+/* DARK MODE */
+
 .hoverText {
     transition: 0.35s font-weight, 0.35s color;
     font-weight: 900;
@@ -28,3 +30,40 @@
 .hoverText:hover ~ .hoverText ~ .hoverText {
     font-weight: 500;
 }
+
+/* END DARK MODE */
+
+/* LIGHT MODE */
+
+.lightHoverText {
+    transition: 0.35s font-weight, 0.35s color;
+    font-weight: 900;
+    color: rgb(84, 85, 90);
+}
+
+.lightHoverText:hover {
+    font-weight: 400;
+    color: rgb(151, 152, 154);
+}
+
+/* To the right */
+.lightHoverText:hover + .hoverText {
+    font-weight: 700;
+    color: rgb(151, 152, 154);
+}
+
+.lightHoverText:hover + .hoverText + .hoverText {
+    font-weight: 500;
+}
+
+/* To the left */
+.lightHoverText:hover ~ .hoverText {
+    font-weight: 700;
+    color: rgb(151, 152, 154);
+}
+
+.lightHoverText:hover ~ .hoverText ~ .hoverText {
+    font-weight: 500;
+}
+
+/* END LIGHT MODE */

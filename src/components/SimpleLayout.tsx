@@ -3,8 +3,11 @@
 import { Container } from '@/components/Container'
 import React from 'react'
 import styles from '@/styles/bubble.module.css'
+import { useTheme } from 'next-themes'
 
 const BubbleText = ({ text }: { text: string }) => {
+  const { theme } = useTheme()
+
   return (
     <h2 className="relative z-20 font-thin">
       {text
@@ -12,7 +15,12 @@ const BubbleText = ({ text }: { text: string }) => {
             .toString()
             .split('')
             .map((child, idx) => (
-              <span className={styles.hoverText} key={idx}>
+              <span
+                className={
+                  theme === 'light' ? styles.lightHoverText : styles.hoverText
+                }
+                key={idx}
+              >
                 {child}
               </span>
             ))
@@ -32,7 +40,6 @@ export function SimpleLayout({
   animation?: boolean
   children?: React.ReactNode
 }) {
-  console.log(animation)
   return (
     <Container className="mt-16 sm:mt-32">
       <header className="max-w-2xl">
