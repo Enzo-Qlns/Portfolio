@@ -8,6 +8,7 @@ import '@/styles/tailwind.css'
 import { ShootingStars } from '@/components/ui/shooting-stars'
 import { StarsBackground } from '@/components/ui/stars-background'
 import React from 'react'
+import CalButton from '@/components/CalButton'
 
 export const metadata: Metadata = {
   title: {
@@ -31,12 +32,13 @@ export default function RootLayout({
     <html lang="fr" className="h-full antialiased" suppressHydrationWarning>
       <body className="flex h-full bg-zinc-50 dark:bg-black">
         <Providers>
-          <div className="flex w-full z-50">
+          <div className="z-50 flex w-full">
             <Layout>{children}</Layout>
           </div>
         </Providers>
         <ShootingStars />
         <StarsBackground />
+        <CalButton />
       </body>
       <GoogleAnalytics gaId="G-VG6R4B6L8Z" />
     </html>
