@@ -1,20 +1,23 @@
+import React from 'react'
+
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
-import { Button } from '@/components/Button'
+
 import { MovingButton } from '@/components/ui/moving-border'
-import { Container } from '@/components/Container'
+import { LinkPreview } from '@/components/ui/link-preview'
+import { GlareCard } from '@/components/ui/glare-card'
+import { Cover } from '@/components/ui/cover'
+
 import { GitHubIcon, LinkedInIcon, ProIcon } from '@/components/SocialIcons'
+import { Container } from '@/components/Container'
+
 import logoPum from '@/images/logos/pum.svg'
 import logoEsgi from '@/images/logos/esgi.svg'
-import { Cover } from '@/components/ui/cover'
-import React from 'react'
-import { GlareCard } from '@/components/ui/glare-card'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
-import { LinkPreview } from '@/components/ui/link-preview'
-import { PinContainer } from '@/components/ui/3d-pin'
+
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
