@@ -10,5 +10,5 @@ services:
       - reverse-proxy-net
 
 networks:
-  	reverse-proxy-net:
-      external: true
+  reverse-proxy-net:
+    external: true
