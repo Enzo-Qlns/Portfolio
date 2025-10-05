@@ -7,7 +7,8 @@ services:
       context: .
       dockerfile: Dockerfile
     networks:
-      - my-net
+      - reverse-proxy-net
 
 networks:
-  my-net:
+  	reverse-proxy-net:
+      external: true
